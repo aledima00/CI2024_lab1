@@ -57,4 +57,6 @@ Notice that this time there was no improvement, instead the algorithm seems to b
 ## Self-Adapting Tweaking Function
 As said above, i added the possibility of having a self-adaptation of the number of multiple mutation of the tweaking function, making it **larger when the fitness is increasing**, in order to speed-up the climb, and **smaller when stationary points are found**. In this way, i tried to avoid the model to reduce the impact of restarts on the reach of local maximum.
 Thanks to empirical attempts, i decided to implement the **1 out of 5 rule**, with a linearly increasing portion of tweak, that was expressed in percent terms.
+> For the given parameters, i started with a fitness equal to `-4.1999*10^8`, and in `10000` iterations (split in `2` reps of `5000` iterations)  i managed to increase the fitness up to `-1.5702*10^8`, considering fitness as the negative sum of all costs; i further provide a plot of the fitness:
+![self-adapting_tweak_plot](imgs/self_adapting_tweak.png)
 
